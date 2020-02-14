@@ -35,7 +35,7 @@ yearInput.addEventListener('input', getYearFetch);
       let year = yearInput.value;
       
       if(year != ''){
-        fetch('http://numbersapi.com/'+ year +'/year')
+        fetch('http://numbersapi.com/'+ year +'/year', {mode: 'no-cors'})
         .then(response => response.text())
         .then(data => {
           factY.style.display = 'block';
