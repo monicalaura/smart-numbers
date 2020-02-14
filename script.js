@@ -18,7 +18,7 @@ yearInput.addEventListener('input', getYearFetch);
 	  console.log(number);
       
       if(number != ''){
-        fetch('http://numbersapi.com/'+number)
+        fetch('https://cors-anywhere.herokuapp.com/http://numbersapi.com/'+number)
         .then(response => response.text())
         .then(data => {		  
           factN.style.display = 'block';
