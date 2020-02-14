@@ -20,7 +20,7 @@ yearInput.addEventListener('input', getYearFetch);
     
 	    
       if(number != ''){	 
-     fetch('https://crossorigin.me/http://numbersapi.com'/ +number)
+     fetch('https://crossorigin.me/http://numbersapi.com/' +number)
         .then(response => response.text())
         .then(data => {		  
           factN.style.display = 'block';
@@ -37,7 +37,7 @@ yearInput.addEventListener('input', getYearFetch);
       let year = yearInput.value;
       
       if(year != ''){
-        fetch('https://crossorigin.me/http://numbersapi.com/' +year)
+        fetch('https://crossorigin.me/http://numbersapi.com/' + year +'/year')
         .then(response => response.text())
         .then(data => {
           factY.style.display = 'block';
