@@ -5,7 +5,7 @@ let factTextY = document.querySelector('#factTextY');
 //get inputs for number & year
 let numberInput = document.querySelector('#numberInput');
 let yearInput = document.querySelector('#yearInput');
-var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
 
 numberInput.addEventListener('input', getNumberFetch);
 yearInput.addEventListener('input', getYearFetch);
@@ -20,7 +20,7 @@ yearInput.addEventListener('input', getYearFetch);
     
 	    
       if(number != ''){	 
-     fetch(' https://apiproxy.nsuchy.me/proxy.php?url= http://numbersapi.com'/ +number)
+     fetch('https://crossorigin.me/http://numbersapi.com'/ +number)
         .then(response => response.text())
         .then(data => {		  
           factN.style.display = 'block';
@@ -37,7 +37,7 @@ yearInput.addEventListener('input', getYearFetch);
       let year = yearInput.value;
       
       if(year != ''){
-        fetch('https://apiproxy.nsuchy.me/proxy.php?url= http://numbersapi.com/'+year)
+        fetch('https://crossorigin.me/http://numbersapi.com/' +year)
         .then(response => response.text())
         .then(data => {
           factY.style.display = 'block';
