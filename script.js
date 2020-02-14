@@ -18,11 +18,9 @@ yearInput.addEventListener('input', getYearFetch);
       let number = numberInput.value;
 	  console.log(number);
     
-   
-    targetUrl = 'http://numbersapi.com'
 	    
       if(number != ''){	 
-     fetch(proxyUrl + targetUrl/ +number)
+     fetch(' https://apiproxy.nsuchy.me/proxy.php?url= http://numbersapi.com'/ +number)
         .then(response => response.text())
         .then(data => {		  
           factN.style.display = 'block';
@@ -39,7 +37,7 @@ yearInput.addEventListener('input', getYearFetch);
       let year = yearInput.value;
       
       if(year != ''){
-        fetch('http://numbersapi.com/'+year, {mode: 'no-cors'})
+        fetch('https://apiproxy.nsuchy.me/proxy.php?url= http://numbersapi.com/'+year)
         .then(response => response.text())
         .then(data => {
           factY.style.display = 'block';
