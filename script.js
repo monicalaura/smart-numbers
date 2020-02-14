@@ -5,6 +5,7 @@ let factTextY = document.querySelector('#factTextY');
 //get inputs for number & year
 let numberInput = document.querySelector('#numberInput');
 let yearInput = document.querySelector('#yearInput');
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 numberInput.addEventListener('input', getNumberFetch);
 yearInput.addEventListener('input', getYearFetch);
@@ -16,9 +17,12 @@ yearInput.addEventListener('input', getYearFetch);
     function getNumberFetch(){
       let number = numberInput.value;
 	  console.log(number);
-      
-      if(number != ''){
-        fetch('http://numbersapi.com/'+number, {mode: 'no-cors'})
+    
+   
+    targetUrl = 'http://numbersapi.com'
+	    
+      if(number != ''){	 
+     fetch(proxyUrl + targetUrl/ +number)
         .then(response => response.text())
         .then(data => {		  
           factN.style.display = 'block';
